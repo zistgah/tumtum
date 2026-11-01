@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Bell state (Aer GPU)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/examples/aer-gpu-bell/gpu_bell.py",
+      "python": "/home/ac/.local/share/pipx/venvs/qiskit-aer-gpu/bin/python",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "GPU capacity benchmark",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/examples/gpu-capacity-benchmark/benchmark.py",
+      "python": "/home/ac/.local/share/pipx/venvs/qiskit-aer-gpu/bin/python",
+      "args": ["--max-vram-percent", "60", "--reserve-mb", "1024"],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "QAOA Max-Cut (27 qubits, GPU)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/examples/qaoa-maxcut-27/qaoa_maxcut.py",
+      "python": "/home/ac/.local/share/pipx/venvs/qiskit-aer-gpu/bin/python",
+      "args": ["--shots", "8192", "--csv", "${workspaceFolder}/examples/qaoa-maxcut-27/results.csv"],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}

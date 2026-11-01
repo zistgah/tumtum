@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Aer GPU Bell sample",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/gpu_bell.py",
+      "python": "/home/ac/.local/share/pipx/venvs/qiskit-aer-gpu/bin/python",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Benchmark Aer GPU capacity",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/benchmark.py",
+      "python": "/home/ac/.local/share/pipx/venvs/qiskit-aer-gpu/bin/python",
+      "args": ["--max-vram-percent", "60", "--reserve-mb", "1024"],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}

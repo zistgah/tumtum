@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "QAOA Max-Cut (27 qubits, GPU)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/qaoa_maxcut.py",
+      "python": "/home/ac/.local/share/pipx/venvs/qiskit-aer-gpu/bin/python",
+      "args": ["--shots", "8192", "--csv", "${workspaceFolder}/results.csv"],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}
