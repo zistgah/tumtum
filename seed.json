@@ -1,0 +1,32 @@
+{
+  "name": "Quantum Tumtum",
+  "repo": "zistgah/tumtum",
+  "site": "https://github.com/zistgah/tumtum",
+  "artifact": ".seedwork/Quantum-Tumtum-v0.1.0.tar.gz",
+  "doi_placeholder": "__TUMTUM_DOI__",
+  "inject_into": ["README.md", "CITATION.cff", "ZENODO_DOI.txt"],
+  "push_files": [
+    ".gitignore",
+    "README.md",
+    "COPYING",
+    "CITATION.cff",
+    "misty.json",
+    "ZENODO_DOI.txt",
+    ".vscode/launch.json",
+    ".vscode/settings.json",
+    "examples/aer-gpu-bell/README.md",
+    "examples/aer-gpu-bell/gpu_bell.py",
+    "examples/aer-gpu-bell/requirements.txt",
+    "examples/gpu-capacity-benchmark/README.md",
+    "examples/gpu-capacity-benchmark/benchmark-results.csv",
+    "examples/gpu-capacity-benchmark/benchmark.py",
+    "examples/gpu-capacity-benchmark/requirements.txt",
+    "examples/qaoa-maxcut-27/README.md",
+    "examples/qaoa-maxcut-27/results.csv",
+    "examples/qaoa-maxcut-27/qaoa_maxcut.py",
+    "examples/qaoa-maxcut-27/requirements.txt"
+  ],
+  "provenance_dir": "provenance",
+  "backlog": "BACKLOG.md",
+  "pages": false
+}

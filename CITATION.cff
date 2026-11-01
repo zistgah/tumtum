@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use Quantum Tumtum, please cite it as below."
+title: "Quantum Tumtum"
+version: "0.1.0"
+doi: "__TUMTUM_DOI__"
+date-released: '2026-11-01'
+license: GPL-3.0-only
+repository-code: "https://github.com/zistgah/tumtum"
+authors:
+  - family-names: Choudhary
+    given-names: Abhishek
+    affiliation: AyeAI
+    orcid: "https://orcid.org/0009-0002-0684-8320"
+keywords:
+  - quantum computing
+  - Qiskit Aer
+  - GPU simulation
+  - QAOA
+  - Max-Cut
+abstract: >-
+  GPU-accelerated Qiskit Aer examples: a Bell-state circuit, a VRAM-capped
+  statevector capacity benchmark, and one-layer QAOA Max-Cut on a 27-node cycle.

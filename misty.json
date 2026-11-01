@@ -1,0 +1,28 @@
+{
+  "title": "Quantum Tumtum",
+  "version": "0.1.0",
+  "upload_type": "software",
+  "description": "Quantum Tumtum is a Qiskit Aer GPU simulation project containing a Bell-state example, a VRAM-capped statevector capacity benchmark, and a 27-qubit one-layer QAOA Max-Cut example. The QAOA example simulates a 27-node cycle and reports sampled cut statistics. The project is distributed under GNU GPL version 3.",
+  "license": "gpl-3.0",
+  "access_right": "open",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Choudhary, Abhishek",
+      "affiliation": "AyeAI, Hyderabad, India",
+      "orcid": "0009-0002-0684-8320"
+    }
+  ],
+  "keywords": [
+    "quantum computing",
+    "Qiskit",
+    "Qiskit Aer",
+    "GPU simulation",
+    "statevector",
+    "QAOA",
+    "Max-Cut"
+  ],
+  "repository": "https://github.com/zistgah/tumtum",
+  "programming_language": ["Python"],
+  "notes": "Copyright (C) 1993-2026 Abhishek Choudhary. All rights reserved."
+}

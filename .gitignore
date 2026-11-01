@@ -2,4 +2,8 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
-.vscode/*.log
+.vscode/*.log.seedwork/
+.doi-dryrun/
+.doi-package/
+misty_result.json
+misty_result.json.sha256

@@ -1,5 +1,7 @@
 # Quantum Tumtum
 
+DOI: https://doi.org/__TUMTUM_DOI__
+
 GPU-powered quantum circuit simulation examples built with Qiskit Aer.
 
 **Copyright (C) 1993-2026 Abhishek Choudhary. All rights reserved.**
