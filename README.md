@@ -2,11 +2,21 @@
 
 DOI: https://doi.org/10.5281/zenodo.23861046
 
+Project website: https://zistgah.github.io/tumtum/
+
 GPU-powered quantum circuit simulation examples built with Qiskit Aer.
 
 **Copyright (C) 1993-2026 Abhishek Choudhary. All rights reserved.**
 
 Licensed under the GNU General Public License, version 3. See [`COPYING`](COPYING).
+
+## Try in Google Colab
+
+Choose a GPU runtime in Colab for GPU execution. The notebooks install `qiskit-aer-gpu`; GPU availability depends on the runtime assigned to your Colab session.
+
+- [Bell state](https://colab.research.google.com/github/zistgah/tumtum/blob/main/notebooks/aer-gpu-bell.ipynb)
+- [GPU capacity benchmark](https://colab.research.google.com/github/zistgah/tumtum/blob/main/notebooks/gpu-capacity-benchmark.ipynb)
+- [QAOA Max-Cut, 27 qubits](https://colab.research.google.com/github/zistgah/tumtum/blob/main/notebooks/qaoa-maxcut-27.ipynb)
 
 ## Examples
 

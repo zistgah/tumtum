@@ -133,7 +133,7 @@ if [ "$DO_PUSH" = "1" ]; then
       else
         gh repo create "$P_REPO" --public --source=. --push 2>>"$LOG" && echo "  repo created + pushed"
       fi
-      [ "$P_PAGES" = "1" ] && { gh api -X POST "repos/$P_REPO/pages" -f "source[branch]=main" -f "source[path]=/" >/dev/null 2>&1 && echo "  Pages enabled" || echo "  (Pages may already be enabled)"; }
+      [ "$P_PAGES" = "1" ] && { gh api -X POST "repos/$P_REPO/pages" -f "source[branch]=main" -f "source[path]=/docs" >/dev/null 2>&1 && echo "  Pages enabled" || echo "  (Pages may already be enabled)"; }
     )
     [ -n "$P_SITE" ] && st "live at: $P_SITE"
   else st "push skipped"; fi
@@ -145,12 +145,22 @@ if [ "$DO_PUBLISH" = "1" ]; then
   [ -n "$MISTY" ] || die "misty not installed"
   [ -f misty.json ] || die "misty.json missing"
   [ -n "${ZENODO_TOKEN:-}" ] || die "ZENODO_TOKEN not set in env"
+  OTS="$(command -v ots || true)"
+  [ -n "$OTS" ] || { [ -x "$HOME/.local/bin/ots" ] && OTS="$HOME/.local/bin/ots"; }
+  [ -n "$OTS" ] || die "OpenTimestamps client is required; install opentimestamps-client before minting"
   echo "  ============================================================"
   echo "   MINT A PERMANENT DOI ON PRODUCTION ZENODO (irreversible)"
   echo "   Project: $P_NAME   Artifact: $P_ART   SHA-256: $SHA"
   echo "  ============================================================"
   read -r -p "  Type MINT to proceed: " C
   [ "$C" = "MINT" ] || { st "mint aborted"; exit 0; }
+  hd "4a. REQUIRED OPENTIMESTAMPS"
+  "$OTS" stamp "$P_ART" 2>&1 | tee -a "$LOG" || die "OpenTimestamps stamping failed; DOI was not minted"
+  [ -s "$P_ART.ots" ] || die "OpenTimestamps did not produce a proof; DOI was not minted"
+  mkdir -p "$P_PROV"
+  mv -f "$P_ART.ots" "$P_PROV/" || die "could not preserve the OpenTimestamps proof; DOI was not minted"
+  st "OTS proof created: $P_PROV/$(basename "$P_ART").ots"
+  hd "4b. MINT DOI"
   "$MISTY" publish -m misty.json -f "$P_ART" --package-dir ".doi-package" --output "misty_result.json" 2>&1 | tee -a "$LOG"
   DOI="$(python3 -c "import json;print(json.load(open('misty_result.json'))['doi'])" 2>/dev/null || true)"
   [ -n "$DOI" ] || die "could not read DOI from misty_result.json"
@@ -162,11 +172,7 @@ import sys;p,ph,doi=sys.argv[1:4];s=open(p,encoding='utf-8').read();open(p,'w',e
 PY
     done
   fi
-  hd "5. OPENTIMESTAMPS"
-  if "$MISTY" ots stamp "$P_ART" 2>>"$LOG"; then [ -f "$P_ART.ots" ] && mv -f "$P_ART.ots" "$P_PROV/"; st "ots: $P_PROV/$P_ART.ots"
-  elif command -v ots >/dev/null 2>&1; then ots stamp "$P_ART" && mv -f "$P_ART.ots" "$P_PROV/" 2>/dev/null; st "ots: $P_PROV/$P_ART.ots"
-  else st "OTS skipped (install misty-doi[ots])"; fi
-  st "REMINDER: re-run --push to publish the DOI-injected artifact + $P_PROV/*.ots"
+  st "DOI minted; preserve and publish the DOI-injected files and $P_PROV/*.ots using a non-force push"
 fi
 
 # ---- 6. backlog issues ----

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Quantum Tumtum: reproducible Qiskit Aer GPU examples, Colab notebooks, and release provenance.">
+  <title>Quantum Tumtum</title>
+  <style>
+    :root { color-scheme: light; --ink: #17233b; --muted: #53627a; --accent: #1457c5; --paper: #f5f7fb; --line: #dce3ee; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 system-ui, sans-serif; }
+    header { padding: 3.5rem max(1.25rem, calc((100% - 940px) / 2)); background: #102044; color: white; }
+    header p { max-width: 720px; color: #d6e0f3; font-size: 1.1rem; }
+    main { max-width: 940px; margin: 2rem auto; padding: 0 1.25rem 3rem; }
+    h1 { margin: 0; font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.1; }
+    h2 { margin-top: 2.4rem; }
+    a { color: var(--accent); }
+    header a { color: white; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+    article, .panel { padding: 1.25rem; background: white; border: 1px solid var(--line); border-radius: 12px; }
+    article h3 { margin-top: 0; }
+    .button { display: inline-block; margin-top: .35rem; padding: .5rem .75rem; border-radius: 7px; background: #eaf1ff; font-weight: 650; text-decoration: none; }
+    code { overflow-wrap: anywhere; }
+    footer { border-top: 1px solid var(--line); margin-top: 2rem; padding-top: 1rem; color: var(--muted); font-size: .92rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Quantum Tumtum</h1>
+    <p>Learn and experiment with Qiskit Aer GPU simulation through runnable examples, Colab notebooks, and a measured 27-qubit QAOA Max-Cut experiment.</p>
+    <p><a href="https://doi.org/10.5281/zenodo.23861046">Version 0.1.0 DOI</a> · <a href="https://github.com/zistgah/tumtum">Source on GitHub</a> · <a href="https://github.com/zistgah/tumtum/blob/main/COPYING">GPL-3.0 license</a></p>
+  </header>
+  <main>
+    <section>
+      <h2>Try it in Google Colab</h2>
+      <p>Open a notebook, then choose a GPU runtime for GPU execution. Colab availability and GPU type vary by account and session.</p>
+      <div class="cards">
+        <article>
+          <h3>Bell state</h3>
+          <p>Build and measure a two-qubit entangled state with Aer.</p>
+          <a class="button" href="https://colab.research.google.com/github/zistgah/tumtum/blob/main/notebooks/aer-gpu-bell.ipynb">Open in Colab</a>
+        </article>
+        <article>
+          <h3>GPU capacity</h3>
+          <p>Estimate statevector capacity with a VRAM budget and reserve.</p>
+          <a class="button" href="https://colab.research.google.com/github/zistgah/tumtum/blob/main/notebooks/gpu-capacity-benchmark.ipynb">Open in Colab</a>
+        </article>
+        <article>
+          <h3>QAOA Max-Cut</h3>
+          <p>Run a one-layer QAOA experiment on a 27-node cycle.</p>
+          <a class="button" href="https://colab.research.google.com/github/zistgah/tumtum/blob/main/notebooks/qaoa-maxcut-27.ipynb">Open in Colab</a>
+        </article>
+      </div>
+    </section>
+    <section>
+      <h2>Project</h2>
+      <div class="panel">
+        <p>Quantum Tumtum is a collection of GPU-powered quantum-circuit simulation examples. These run on a simulator, not on a physical quantum computer. The capacity benchmark uses memory estimates and a reserve, but GPU workloads and simulator overhead vary.</p>
+        <p>On an NVIDIA GeForce RTX 3050 with 4 GB VRAM, the recorded benchmark completed a 27-qubit double-precision statevector and stopped before attempting 28 qubits. The QAOA sample, run with 8,192 shots, measured a mean cut of 20.238/27 against a random-assignment baseline of 13.5/27; it sampled the exact odd-cycle optimum of 26/27 on 23 shots. Results are one recorded run, not a performance guarantee.</p>
+        <p><a href="https://zenodo.org/records/23861046">View the archived release</a> · <a href="https://github.com/zistgah/tumtum/blob/main/provenance/Quantum-Tumtum-v0.1.0.tar.gz.ots">Open the OpenTimestamps proof (pending Bitcoin confirmation)</a> · <a href="https://github.com/zistgah/tumtum/tree/main/examples">Browse examples and source</a></p>
+      </div>
+    </section>
+    <footer>
+      <p>Copyright (C) 1993-2026 Abhishek Choudhary. All rights reserved.</p>
+      <p>Distributed under GPL-3.0-only. Qiskit and Google Colab are respective third-party marks and services; this project is not affiliated with or endorsed by them.</p>
+    </footer>
+  </main>
+</body>
+</html>
