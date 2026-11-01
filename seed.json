@@ -1,7 +1,7 @@
 {
   "name": "Quantum Tumtum",
   "repo": "zistgah/tumtum",
-  "site": "https://zistgah.github.io/tumtum/",
+  "site": "https://zistgah.org/tumtum/",
   "artifact": ".seedwork/Quantum-Tumtum-v0.1.0.tar.gz",
   "doi_placeholder": "__TUMTUM_DOI__",
   "inject_into": ["README.md", "CITATION.cff", "ZENODO_DOI.txt"],

@@ -2,7 +2,7 @@
 
 DOI: https://doi.org/10.5281/zenodo.23861046
 
-Project website: https://zistgah.github.io/tumtum/
+Project website: https://zistgah.org/tumtum/
 
 GPU-powered quantum circuit simulation examples built with Qiskit Aer.
 
