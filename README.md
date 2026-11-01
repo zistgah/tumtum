@@ -1,6 +1,8 @@
 # Quantum Tumtum
 
-DOI: https://doi.org/10.5281/zenodo.23861046
+Version 0.2.0 DOI: https://doi.org/10.5281/zenodo.23861995
+
+Concept DOI: https://doi.org/10.5281/zenodo.23861045
 
 Project website: https://zistgah.org/tumtum/
 
@@ -24,7 +26,11 @@ Choose a GPU runtime in Colab for GPU execution. The notebooks install `qiskit-a
 - [`gpu-capacity-benchmark`](examples/gpu-capacity-benchmark/README.md) — a VRAM-capped benchmark that finds a safe statevector size.
 - [`qaoa-maxcut-27`](examples/qaoa-maxcut-27/README.md) — one-layer QAOA Max-Cut on a 27-node cycle.
 
-The QAOA sample was run on an NVIDIA GeForce RTX 3050 using 8,192 shots. It measured a mean cut of 20.238/27, compared with a random-assignment baseline of 13.5/27, and sampled the cycle's 26/27 optimum 23 times. Benchmark outputs are included next to their examples.
+The QAOA sample was run on an NVIDIA GeForce RTX 3050 using 8,192 shots. It measured a mean cut of 20.238/27, compared with a random-assignment baseline of 13.5/27, and sampled the cycle's 26/27 optimum 23 times.
+
+A Colab benchmark run on a GPU reporting 15,360 MiB VRAM completed a 28-qubit double-precision statevector (4,096 MiB). With a 40% VRAM cap, 2,048 MiB reserve, and 1.5x overhead estimate, it stopped before 29 qubits. The GPU model was not reported; per-qubit timings are in [`benchmark-colab-16gb.csv`](examples/gpu-capacity-benchmark/benchmark-colab-16gb.csv). This is one measured configuration, not a guarantee of other GPU capacity.
+
+The [v0.2.0 release archive](https://doi.org/10.5281/zenodo.23861995) has an [OpenTimestamps proof](provenance/Quantum-Tumtum-v0.2.0.tar.gz.ots); Bitcoin confirmation is pending.
 
 ## Requirements
 

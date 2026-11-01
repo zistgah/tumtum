@@ -1,8 +1,8 @@
 {
   "title": "Quantum Tumtum",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "upload_type": "software",
-  "description": "Quantum Tumtum is a Qiskit Aer GPU simulation project containing a Bell-state example, a VRAM-capped statevector capacity benchmark, and a 27-qubit one-layer QAOA Max-Cut example. The QAOA example simulates a 27-node cycle and reports sampled cut statistics. The project is distributed under GNU GPL version 3.",
+  "description": "Quantum Tumtum is a Qiskit Aer GPU simulation project with Bell-state and 27-qubit QAOA Max-Cut examples, executable Colab notebooks, and a project website. Its VRAM-capped statevector benchmark includes runs on a 4 GiB RTX 3050 (27 qubits) and a GPU reporting 15,360 MiB VRAM (28 qubits, 40% cap, 2,048 MiB reserve, 1.5x overhead). The latter run stopped before 29 qubits; the GPU model was not reported. Distributed under GNU GPL version 3.",
   "license": "gpl-3.0",
   "access_right": "open",
   "language": "eng",

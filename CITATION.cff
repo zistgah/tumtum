@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use Quantum Tumtum, please cite it as below."
 title: "Quantum Tumtum"
-version: "0.1.0"
-doi: "10.5281/zenodo.23861046"
+version: "0.2.0"
+doi: "10.5281/zenodo.23861995"
 date-released: '2026-11-01'
 license: GPL-3.0-only
 repository-code: "https://github.com/zistgah/tumtum"
@@ -19,4 +19,5 @@ keywords:
   - Max-Cut
 abstract: >-
   GPU-accelerated Qiskit Aer examples: a Bell-state circuit, a VRAM-capped
-  statevector capacity benchmark, and one-layer QAOA Max-Cut on a 27-node cycle.
+  statevector capacity benchmark including a 28-qubit Colab run, executable
+  Colab notebooks, a project website, and one-layer QAOA Max-Cut on a 27-node cycle.

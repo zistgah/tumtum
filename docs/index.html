@@ -27,8 +27,8 @@
 <body>
   <header>
     <h1>Quantum Tumtum</h1>
-    <p>Learn and experiment with Qiskit Aer GPU simulation through runnable examples, Colab notebooks, and a measured 27-qubit QAOA Max-Cut experiment.</p>
-    <p><a href="https://doi.org/10.5281/zenodo.23861046">Version 0.1.0 DOI</a> · <a href="https://github.com/zistgah/tumtum">Source on GitHub</a> · <a href="https://github.com/zistgah/tumtum/blob/main/COPYING">GPL-3.0 license</a></p>
+    <p>Learn and experiment with Qiskit Aer GPU simulation through runnable examples, Colab notebooks, and measured GPU statevector-capacity and QAOA experiments.</p>
+    <p><a href="https://doi.org/10.5281/zenodo.23861995">Version 0.2.0 DOI</a> · <a href="https://doi.org/10.5281/zenodo.23861045">Concept DOI</a> · <a href="https://github.com/zistgah/tumtum">Source on GitHub</a> · <a href="https://github.com/zistgah/tumtum/blob/main/COPYING">GPL-3.0 license</a></p>
   </header>
   <main>
     <section>
@@ -57,7 +57,8 @@
       <div class="panel">
         <p>Quantum Tumtum is a collection of GPU-powered quantum-circuit simulation examples. These run on a simulator, not on a physical quantum computer. The capacity benchmark uses memory estimates and a reserve, but GPU workloads and simulator overhead vary.</p>
         <p>On an NVIDIA GeForce RTX 3050 with 4 GB VRAM, the recorded benchmark completed a 27-qubit double-precision statevector and stopped before attempting 28 qubits. The QAOA sample, run with 8,192 shots, measured a mean cut of 20.238/27 against a random-assignment baseline of 13.5/27; it sampled the exact odd-cycle optimum of 26/27 on 23 shots. Results are one recorded run, not a performance guarantee.</p>
-        <p><a href="https://zenodo.org/records/23861046">View the archived release</a> · <a href="https://github.com/zistgah/tumtum/blob/main/provenance/Quantum-Tumtum-v0.1.0.tar.gz.ots">Open the OpenTimestamps proof (pending Bitcoin confirmation)</a> · <a href="https://github.com/zistgah/tumtum/tree/main/examples">Browse examples and source</a></p>
+        <p>A separate Colab benchmark run reported 15,360 MiB total VRAM and completed a 28-qubit double-precision statevector (4,096 MiB). It used a 40% VRAM cap (6,144 MiB), a 2,048 MiB reserve, and a 1.5x overhead estimate; it stopped before 29 qubits, estimated at 12,288 MiB. The GPU model was not reported. See the <a href="https://github.com/zistgah/tumtum/blob/main/examples/gpu-capacity-benchmark/benchmark-colab-16gb.csv">per-qubit timings</a>. GPU capacity varies by device and load.</p>
+        <p><a href="https://zenodo.org/records/23861995">Download v0.2.0</a> · <a href="https://doi.org/10.5281/zenodo.23861045">View all archived versions</a> · <a href="https://github.com/zistgah/tumtum/blob/main/provenance/Quantum-Tumtum-v0.2.0.tar.gz.ots">v0.2.0 OpenTimestamps proof (Bitcoin confirmation pending)</a> · <a href="https://github.com/zistgah/tumtum/blob/main/provenance/Quantum-Tumtum-v0.1.0.tar.gz.ots">v0.1.0 proof</a> · <a href="https://github.com/zistgah/tumtum/tree/main/examples">Browse examples and source</a></p>
       </div>
     </section>
     <footer>
